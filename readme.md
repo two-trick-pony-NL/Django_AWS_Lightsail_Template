@@ -1,30 +1,39 @@
 # Django Project Deployment on AWS LightSail Containers via GitHub Actions
+## Why: 
+Setting up django for production is hard! Using this template will give you a easy deployment that comes out of the box with: 
+- 🐳 Container service (Easily scale both horizontally and vertically in AWS lightsail)
+- 🌎 Nginx reverse proxy integrated with uwsgi no set up required
+- 🗂 S3 file storage configured out of the box ready to use in django
+- 🤐 Environment secrets tucked away in your repository secrets (so easy to collaborate)
+- 🏎 From code commit to deployed in less than 5 minutes
+- 🤑 Serverless deployment for < $7 per month
 
-This guide will walk you through setting up and deploying your Django project on AWS LightSail containers using GitHub Actions. This deployment strategy offers super easy deployment, high scalability, and eliminates the hassle of managing servers.
 
-## Prerequisites packages installed
+# Installation
+
+
+## Prerequisites and testing locally
 - [ ] Have Python3 installed
 - [ ] run `brew install mysql` - in case you have don't have this
 - [ ] run `pip3 install -r requirements.txt` to get all requirements for template
+- [ ] fill in the `core/.env` file with your app's details
+- [ ] run `python3 manage.py runserver` to check if the app is working on your local machine
 
 ## Prerequisites hosting 
 
 Before you start, make sure you have the following prerequisites:
 
-- Clone this repository to your own Github account
+- Clone this repository to your own Github account - so we can leverage github actions
 - AWS account with LightSail service enabled and a container service explicitly called `djangoapp` - the build script depends on your app having this name. You can update it later by using find and replace and rebuilding your containers. 
 
 
 ## Steps
 
 ### 1. Configure AWS LightSail Container Service
-
 - Log in to your AWS Management Console.
 - Navigate to the LightSail container.
-- Create a container service and configure it based on your project requirements.
-- Note the name of your service (you'll need it later)
+- Create a container service and name it `djangoapp` and pick a region you desire. 
 - Note the region of your service
-- Write down your `service name` and your `region`
 
 ### 2. Set Up AWS Access Credentials
 

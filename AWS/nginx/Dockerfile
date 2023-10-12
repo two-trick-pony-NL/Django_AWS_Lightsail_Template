@@ -7,7 +7,7 @@ FROM nginx:1.19.0-alpine
 RUN mkdir /tmp/nginx
 
 #Adding Django Static files into nginx so they dont have to be answered by Django
-#COPY staticfiles/ ./static 
+COPY staticfiles/ ./static 
 COPY staticfiles/ ./staticfiles 
 
 
