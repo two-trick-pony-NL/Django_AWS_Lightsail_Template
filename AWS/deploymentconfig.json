@@ -1,0 +1,9 @@
+{"countdowntimer": {
+  "image": ":countdowntimer.countdowntimer.latest",
+  "ports": {"8000": "HTTP"}
+  },
+  "countdowntimer-nginx": {
+    "image": ":countdowntimer.nginx.latest",
+    "ports": {"80": "HTTP"}
+  }
+}

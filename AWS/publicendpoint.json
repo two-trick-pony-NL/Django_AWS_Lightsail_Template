@@ -1,0 +1,11 @@
+{
+  "containerName": "countdowntimer-nginx",
+  "containerPort": 80,
+  "healthCheck": {
+    "healthyThreshold": 2,
+    "unhealthyThreshold": 10,
+    "timeoutSeconds": 60,
+    "intervalSeconds": 300,
+    "path": "/healthcheck",
+    "successCodes": "200-299"
+}}
