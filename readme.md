@@ -23,7 +23,6 @@ Setting up django for production is hard! Using this template will give you a ea
 ## Prerequisites and testing locally
 - [ ] Have Python3 installed
 - [ ] run `brew install mysql` - in case you have don't have this
-- [ ] run `brew install uwsgi` - you can run the app locally without this, but the dockerfile will need it to be in the requirements.txt file
 - [ ] run `pip3 install -r requirements.txt` to get all requirements for template
 - [ ] fill in the `core/.env` file with your app's details
 - [ ] run `python3 manage.py runserver` to check if the app is working on your local machine
@@ -55,12 +54,11 @@ In AWS lightsail create a storage bucket and obtain the:
 - `S3_SECRET_KEY`
 - `S3_ACCESS_KEY`
 - `S3_AWS_STORAGE_BUCKET_NAME`
-- 
 
 ### 3. Update GitHub Repository Secrets
 
 In your GitHub repository, go to `Settings` -> `Secrets` and add the following secrets:
-- `DJANGO_SECRET_KEY`: can be anything you want ideally a long string. Make sure to have the same string locally as in github as otherwise your sessions won't match. 
+
 - `AWS_ACCESS_KEY_ID`: Your AWS access key ID. from step 2
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key. from step 2
 - `AWS_REGION`: Your AWS region (e.g., `us-east-1`). this must match what you did in step 1 
@@ -71,5 +69,24 @@ In your GitHub repository, go to `Settings` -> `Secrets` and add the following s
 - `DB_PASSWORD` 
 - `DB_HOST`
 - `DB_NAME`
+
 - `DB_PORT` - for your SQL database. 
-You can also use sqlite in which case you should change your settings.py file in django to do so. But I chose to use a SQL database since data will otherwise be lost if the container reboots. 
+You can also use sqlite in which case you should change your settings.py file in django to do so. But I chose to use a SQL database since data will otherwise be lost if the container reboots.
+
+When you're done it should look like this: 
+
+<img width="956" alt="Schermafbeelding 2023-10-12 om 23 29 52" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/fd8cdc56-5516-4884-92db-dc9b1760b2cd">
+
+
+
+### 4. Update your app
+
+- Now you can update your app locally and update it to your hearts desire
+- Once you commit to main, github action will trigger
+- That looks like this:
+<img width="425" alt="Schermafbeelding 2023-10-12 om 23 30 24" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/bf41300f-bc1e-4031-9d4a-28b434a673be">
+- Once the deployment completes your lightsail dashboard should look like this:
+  <img width="953" alt="Schermafbeelding 2023-10-12 om 23 31 10" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/2153f467-e6d6-467c-ad00-21d654149a04">
+  - including the URL to your new container. You can set your own domain name from the lightsail dashboard later. 
+
+- 
