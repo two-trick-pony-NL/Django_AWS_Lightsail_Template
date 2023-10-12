@@ -3,6 +3,7 @@
 Setting up django for production is hard! Using this template will give you a easy deployment that comes out of the box with: 
 - 🐳 Container service (Easily scale both horizontally and vertically in AWS lightsail)
 - 🔐 SSL Certificate on connection
+- 🦺 Safety: if your build fails -> the old container will stay live so you site won't go down
 - 🌎 Nginx reverse proxy integrated with uwsgi no set up required
 - 🗂 S3 file storage configured out of the box ready to use in django
 - 🤐 Environment secrets tucked away in your repository secrets (so easy to collaborate)
