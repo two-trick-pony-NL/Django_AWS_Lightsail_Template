@@ -13,9 +13,6 @@ db.sqlite3
 # Media files
 media/
 
-# Static files
-staticfiles/
-
 # Virtual environment
 venv/
 env/
@@ -35,7 +32,7 @@ logs/
 # Ignore coverage reports
 htmlcov/
 
-# Ignore test database
+# Ignore test da tabase
 test_db.sqlite3
 
 # Ignore local configuration
