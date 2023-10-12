@@ -31,7 +31,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ['*.cs.amazonlightsail.com', 'localhost', '0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['*.cs.amazonlightsail.com', 'localhost', '0.0.0.0', '127.0.0.1', 'djangoapp.vdotvo9a4e2a6.eu-central-1.cs.amazonlightsail.com']
 CSRF_TRUSTED_ORIGINS = ['https://localhost','https://*.amazonlightsail.com','https://127.0.0.1']
 
 

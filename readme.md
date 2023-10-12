@@ -25,22 +25,18 @@ Setting up django for production is hard! Using this template will give you a ea
 - [ ] Have Python3 installed
 - [ ] run `brew install mysql` - in case you have don't have this
 - [ ] run `pip3 install -r requirements.txt` to get all requirements for template
-- [ ] fill in the `core/.env` file with your app's details
+- [ ] fill in the `core/.env` file with your app's details. I provided a sample in the `core` folder
 - [ ] run `python3 manage.py runserver` to check if the app is working on your local machine
-
-## Prerequisites hosting 
-
-Before you start, make sure you have the following prerequisites:
-
-- Clone this repository to your own Github account - so we can leverage github actions
-- AWS account with LightSail service enabled and a container service explicitly called `djangoapp` - the build script depends on your app having this name. You can update it later by using find and replace and rebuilding your containers. 
 
 
 ## Steps
 
+### 0. 
+- I assume you have cloned the repo to your github account
+- You have a AWS account and can log in to http://lightsail.aws.amazon.com 
+
 ### 1. Configure AWS LightSail Container Service
-- Log in to your AWS Management Console.
-- Navigate to the LightSail container.
+- Log in to your AWS on http://lightsail.aws.amazon.com
 - Create a container service and name it `djangoapp` and pick a region you desire. 
 - Note the region of your service
 
@@ -89,5 +85,4 @@ When you're done it should look like this:
 - Once the deployment completes your lightsail dashboard should look like this:
   <img width="953" alt="Schermafbeelding 2023-10-12 om 23 31 10" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/2153f467-e6d6-467c-ad00-21d654149a04">
   - including the URL to your new container. You can set your own domain name from the lightsail dashboard later. 
-
-- 
+- you might need to add the AWS host to your `allowed_hosts` in `core/settings.py` simply paste the URL given by Lightsail e.g: djangoapp.vdotvo9a4e2a6.eu-central-1.cs.amazonlightsail.com 
