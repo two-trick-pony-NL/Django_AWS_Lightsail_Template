@@ -1,9 +1,9 @@
 {"countdowntimer": {
-  "image": ":django.django.latest",
+  "image": ":test-service.django.latest",
   "ports": {"8000": "HTTP"}
   },
   "countdowntimer-nginx": {
-    "image": ":django.nginx.latest",
+    "image": ":test-service.nginx.latest",
     "ports": {"80": "HTTP"}
   }
 }

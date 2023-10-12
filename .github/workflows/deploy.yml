@@ -8,7 +8,8 @@ permissions:
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  AWS_LIGHTSAIL_SERVICE_NAME: ${{ secrets.AWS_SERVICE_NAME }}
+  AWS_LIGHTSAIL_SERVICE_NAME: test-service
+  #AWS_LIGHTSAIL_SERVICE_NAME: ${{ secrets.AWS_SERVICE_NAME }}
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
