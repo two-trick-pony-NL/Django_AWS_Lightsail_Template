@@ -54,7 +54,7 @@ jobs:
         run: ls
   
   builddjango:
-      name: 🚨 Django 
+      name: 🚧 Building Django 
       runs-on: ubuntu-latest
       steps:
         - name: 🗂  Getting code from Github
