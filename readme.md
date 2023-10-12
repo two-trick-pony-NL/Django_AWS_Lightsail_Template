@@ -12,7 +12,7 @@ This guide will walk you through setting up and deploying your Django project on
 Before you start, make sure you have the following prerequisites:
 
 - Clone this repository to your own Github account
-- AWS account with LightSail service enabled and a 
+- AWS account with LightSail service enabled and a container service explicitly called `djangoapp` - the build script depends on your app having this name. You can update it later by using find and replace and rebuilding your containers. 
 
 
 ## Steps
