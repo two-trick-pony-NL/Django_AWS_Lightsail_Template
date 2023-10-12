@@ -53,7 +53,7 @@ jobs:
         run: ls
   
   builddjango:
-      name: 🚨 Deploying
+      name: 🚨 Django 
       runs-on: ubuntu-latest
       steps:
         - name: 🗂  Getting code from Github

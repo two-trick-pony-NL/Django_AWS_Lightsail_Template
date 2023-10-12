@@ -36,7 +36,8 @@ Plenty of tuturials on how to obtain this. At the end of this step you should ha
 In AWS lightsail create a storage bucket and obtain the: 
 - `S3_SECRET_KEY`
 - `S3_ACCESS_KEY`
--  `S3_AWS_STORAGE_BUCKET_NAME`
+- `S3_AWS_STORAGE_BUCKET_NAME`
+- 
 
 ### 3. Update GitHub Repository Secrets
 
