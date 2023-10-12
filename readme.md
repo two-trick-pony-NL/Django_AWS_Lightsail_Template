@@ -36,9 +36,14 @@ Setting up django for production is hard! Using this template will give you a ea
 - You have a AWS account and can log in to http://lightsail.aws.amazon.com 
 
 ### 1. Configure AWS LightSail Container Service
+
 - Log in to your AWS on http://lightsail.aws.amazon.com
 - Create a container service and name it `djangoapp` and pick a region you desire. 
 - Note the region of your service
+<img width="1022" alt="Schermafbeelding 2023-10-12 om 23 58 58" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/29b491f5-e837-4b93-8f2c-14b0e7e9be5b">
+<img width="1022" alt="Schermafbeelding 2023-10-12 om 23 59 38" src="https://github.com/two-trick-pony-NL/Django_AWS_Lightsail_Template/assets/71013416/3b7e85df-04ea-49d1-83c5-8ede2810d8d9">
+
+
 
 ### 2. Set Up AWS Access Credentials
 
