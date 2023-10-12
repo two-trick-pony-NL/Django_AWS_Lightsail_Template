@@ -23,6 +23,7 @@ Setting up django for production is hard! Using this template will give you a ea
 ## Prerequisites and testing locally
 - [ ] Have Python3 installed
 - [ ] run `brew install mysql` - in case you have don't have this
+- [ ] run `brew install uwsgi` - you can run the app locally without this, but the dockerfile will need it to be in the requirements.txt file
 - [ ] run `pip3 install -r requirements.txt` to get all requirements for template
 - [ ] fill in the `core/.env` file with your app's details
 - [ ] run `python3 manage.py runserver` to check if the app is working on your local machine
@@ -59,7 +60,7 @@ In AWS lightsail create a storage bucket and obtain the:
 ### 3. Update GitHub Repository Secrets
 
 In your GitHub repository, go to `Settings` -> `Secrets` and add the following secrets:
-
+- `DJANGO_SECRET_KEY`: can be anything you want ideally a long string. Make sure to have the same string locally as in github as otherwise your sessions won't match. 
 - `AWS_ACCESS_KEY_ID`: Your AWS access key ID. from step 2
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key. from step 2
 - `AWS_REGION`: Your AWS region (e.g., `us-east-1`). this must match what you did in step 1 
