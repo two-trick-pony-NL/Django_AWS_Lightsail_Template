@@ -88,7 +88,6 @@ jobs:
             envkey_S3_ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
             envkey_S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
             envkey_S3_AWS_STORAGE_BUCKET_NAME: ${{ secrets.S3_AWS_STORAGE_BUCKET_NAME }}
-            envkey_SECURE_SETTINGS: True
             envkey_DEBUG: false
             directory: core
             file_name: .env
@@ -98,15 +97,15 @@ jobs:
             sudo pip3 install --upgrade pip
             sudo pip3 install -r requirements.txt
         - name: 🐳 Create a Docker Container for DJANGO
-          run: docker build -t countdowntimer:latest .
+          run: docker build -t django:latest .
         - name: 📬 Upload Backend image to AWS container register
           run: |
             service_name=${{ env.AWS_LIGHTSAIL_SERVICE_NAME }}
             aws lightsail push-container-image \
               --region ${{ env.AWS_REGION }} \
               --service-name ${AWS_LIGHTSAIL_SERVICE_NAME} \
-              --label countdowntimer \
-              --image countdowntimer:latest
+              --label django \
+              --image django:latest
         - name: 🚀 Launching the Containers
           run: |
             aws lightsail create-container-service-deployment --service-name ${{ env.AWS_LIGHTSAIL_SERVICE_NAME }} \

@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+local_settings.py
+
+# Database
+db.sqlite3
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Virtual environment
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Editor-specific files
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+
+# Ignore coverage reports
+htmlcov/
+
+# Ignore test database
+test_db.sqlite3
+
+# Ignore local configuration
+.env
+
+# Ignore secret key file
+secret_key.txt
+
+# Ignore development SQLite database
+dev_db.sqlite3
+
+# Ignore pipenv virtual environment
+Pipfile.lock
