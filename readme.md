@@ -2,12 +2,20 @@
 ## Why: 
 Setting up django for production is hard! Using this template will give you a easy deployment that comes out of the box with: 
 - 🐳 Container service (Easily scale both horizontally and vertically in AWS lightsail)
+- 🔐 SSL Certificate on connection
 - 🌎 Nginx reverse proxy integrated with uwsgi no set up required
 - 🗂 S3 file storage configured out of the box ready to use in django
 - 🤐 Environment secrets tucked away in your repository secrets (so easy to collaborate)
 - 🏎 From code commit to deployed in less than 5 minutes
 - 🤑 Serverless deployment for < $7 per month
 
+## How: 
+- Ever time you commit code to branch `main` --> You trigger a deploy to a new lightsail container automatically
+- This process is fully automated if you provide the correct credentials in your Github Secrets
+
+## What can I do with this?
+- You can build anything you like, without the hassle of setting up reverse proxies, docker containers, updating servers, ssl Sertificate
+- Just go wild on your app without the hassle of hosting. 
 
 # Installation
 
