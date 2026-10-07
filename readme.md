@@ -3,17 +3,23 @@
 
 I'm no longer maintaining this repo as I found it's much easier to deploy using https://djangocloud.dev 
 
-To get started you just add: 
+This is much easier in just 3 steps: 
 
 ```
+# 1. install the djangocloud package
 pip install djangocloud-cli
+```
 
-# Add django cloud to the settings.py
+
+```
+# Add djangocloud to the settings.py
 INSTALLED_APPS = [
     ...
     'djangocloud_cli'
 ]
+```
 
+```
 # And then deploy is just 1 command away
 python manage.py djangocloud deploy
 
