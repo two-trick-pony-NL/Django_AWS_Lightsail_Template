@@ -1,3 +1,9 @@
+
+# Check out https://djangocloud.dev for the easiest django deployment on AWS lightsail 
+
+
+
+# [Deprecated] 
 # Django Project Deployment on AWS LightSail Containers via GitHub Actions
 ## Why: 
 Setting up django for production is hard! Using this template will give you a easy deployment that comes out of the box with: 
